@@ -43,6 +43,12 @@ function displayResults(results) {
     }
 }
 
+        
+         // Get the current year
+    const currentYear = new Date().getFullYear();
+
+    // Update the copyright year element
+    document.getElementById('copyright-year').textContent = currentYear;
 
 
         // Event listener for the search button
@@ -70,3 +76,9 @@ function displayResults(results) {
         performSearch();
     });
 });
+
+// Get the current year
+const currentYear = new Date().getFullYear();
+
+// Update the copyright year element
+document.getElementById('copyright-year').textContent = currentYear;
