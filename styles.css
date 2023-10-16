@@ -5,6 +5,11 @@
     margin: 0;
 }
 
+/* Add styles for the container to use flexbox */
+.container {
+    min-height: 100vh; /* Make the container at least as tall as the viewport */
+}
+
 /* Apply a background color to the entire page */
 body {
     background-color: #163253;
@@ -29,12 +34,14 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    display: block;
 }
 
 #title h1 {
     font-size: 28px;
     color: #00a2e2; /* Sky blue */
     align-content: center;
+    display: block; 
 }
 
 /* Style the search input */
@@ -135,6 +142,7 @@ header {
 @media (max-width: 768px) {
     #logo img {
         height: 50px; /* Reduce image height for smaller screens */
+        display: none;
     }
     
     #title {
@@ -151,7 +159,18 @@ header {
     }
     
     .categoryButton {
-        margin: 5px; /* Add margin between buttons on smaller screens */
+       
         padding: 5px;
     }
 }
+
+
+/* Style the footer */
+#footer {
+    text-align: center;
+    background-color: #163253;
+    color: #00a2e2; /* Sky blue */
+    padding: 10px;
+}
+
+
