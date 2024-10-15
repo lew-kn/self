@@ -7,7 +7,7 @@
 
 /* Add styles for the container to use flexbox */
 .container {
-    min-height: 100vh; /* Make the container at least as tall as the viewport */
+    min-height: 90vh; /* Make the container at least as tall as the viewport */
 }
 
 /* Apply a background color to the entire page */
