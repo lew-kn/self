@@ -7,35 +7,41 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
-    <link rel="icon" href="favicon.png"> <!-- Linking to the favicon image -->
-    
+    <link rel="icon" href="favicon.png">
 </head>
 <body>
     <div class="container">
         <header>
-    <div id="logo">
-        <img src="ZZ-white.png" alt="Logo" height="70">
-    </div>
-    <div id="title">
-        <h1>LMS Group Self Help</h1>
-    </div>
-</header>
+            <div id="logo">
+                <img src="ZZ-white.png" alt="Logo" height="70">
+            </div>
+            <div id="title">
+                <h1>LMS Group Self Help</h1>
+            </div>
+        </header>
 
+        <div id="categoryButtons">
+            <button class="categoryButton" data-category="all">All</button>
+            <button class="categoryButton" data-category="user">User</button>
+            <button class="categoryButton" data-category="workstation">Device</button>
+            <button class="categoryButton" data-category="outlook">Outlook</button>
+        </div>
 
-    <div id="categoryButtons">
-        <button class="categoryButton" data-category="all">All</button>
-        <button class="categoryButton" data-category="user">User</button>
-        <button class="categoryButton" data-category="workstation">Device</button>
-        <button class="categoryButton" data-category="outlook">Outlook</button>
+        <input type="text" id="searchInput" placeholder="Search for documentation">
+        <button id="searchButton">Search</button>
+
+        <!-- Add the Admin Access Button -->
+        
+
+        <div id="resultsGrid"></div>
     </div>
-    
-    <input type="text" id="searchInput" placeholder="Search for documentation">
-    <button id="searchButton">Search</button>
-    
-    <div id="resultsGrid"></div>
-    </div>
+
     <div id="footer">
-        <p>&copy; <span id="copyright-year">2023</span> LMS Group</p>
+        <div id="adminAccess">
+            <button id="adminButton">Admin Access</button>
+        </div>
+        <br>
+        <p>&copy; <span id="copyright-year">2023</span> Zenzero</p>
     </div>
 </body>
 </html>

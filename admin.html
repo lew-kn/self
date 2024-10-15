@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Click Logs</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Reusing the existing CSS file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="icon" href="favicon.png"> <!-- Linking to the favicon image -->
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div id="logo">
+                <img src="ZZ-white.png" alt="Logo" height="70">
+            </div>
+            <div id="title">
+                <h1>Admin Dashboard</h1>
+            </div>
+        </header>
+
+        <!-- Main Content Section -->
+        <div id="mainContent">
+            <h2>Click Logs</h2>
+            <div id="resultsGrid"></div> <!-- Display the click logs in the grid format -->
+        </div>
+
+        <!-- Footer Section -->
+        
+    </div>
+<div id="footer">
+            
+        <p>&copy; <span id="copyright-year">2023</span> Zenzero</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // JavaScript to load the clicks from localStorage and display them in a grid
+            const clickLogs = JSON.parse(localStorage.getItem('clicks')) || {};
+            const $resultsGrid = $('#resultsGrid');
+            
+            if (Object.keys(clickLogs).length === 0) {
+                $resultsGrid.html('<p>No click logs found.</p>');
+            } else {
+                for (const documentName in clickLogs) {
+                    const clickCount = clickLogs[documentName];
+                    
+                    // Create a grid item for each log
+                    const $gridItem = $('<div class="grid-item"></div>');
+                    $gridItem.append(`<p><strong>${documentName}</strong></p>`);
+                    $gridItem.append(`<p>${clickCount} clicks</p>`);
+                    
+                    $resultsGrid.append($gridItem);
+                }
+            }
+
+            // Update the copyright year dynamically
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

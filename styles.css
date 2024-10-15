@@ -12,7 +12,7 @@
 
 /* Apply a background color to the entire page */
 body {
-    background-color: #163253;
+    background-color: #164E65;
     color: white;
     font-family: Arial, sans-serif;
     text-align: center; 
@@ -40,7 +40,7 @@ header {
 
 #title h1 {
     font-size: 28px;
-    color: #00a2e2; /* Sky blue */
+    color: #06AEF4; /* Sky blue */
     align-content: center;
     display: block; 
 }
@@ -60,7 +60,7 @@ header {
 
 /* Style the search button */
 #searchButton {
-    background-color: #00a2e2; /* Sky blue */
+    background-color: #06AEF4; /* Sky blue */
     border: none;
     border-radius: 5px;
     color: white;
@@ -79,7 +79,7 @@ header {
 }
 
 .categoryButton {
-    background-color: #f49722; /* Orange */
+    background-color: #ff8200; /* Orange */
     border: none;
     border-radius: 5px;
     color: white;
@@ -92,7 +92,7 @@ header {
 }
 
 .categoryButton.active {
-    background-color: #00a2e2; /* Sky blue */
+    background-color: #06AEF4; /* Sky blue */
 }
 
 /* Style the grid for search results */
@@ -169,9 +169,31 @@ header {
 /* Style the footer */
 #footer {
     text-align: center;
-    background-color: #163253;
-    color: #00a2e2; /* Sky blue */
+    background-color: #242424;
+    color: #06AEF4; /* Sky blue */
     padding: 10px;
+    transition: background-color 0.3s ease;
+
+}
+
+/* Add some style for the Admin Access button */
+#adminAccess {
+    margin-top: 20px;
+}
+
+#adminButton {
+    background-color: #ff8200; /* Orange */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#adminButton:hover {
+    background-color: #06AEF4; /* Sky blue */
 }
 
 
